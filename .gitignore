@@ -8,6 +8,11 @@ elsarticle-harv.bst
 # Temp Excel
 ~$*.xlsx
 
+# Figures (keep local, not in repo)
+Framework.png
+TaskFig.png
+Plots/
+
 # Python
 __pycache__/
 *.pyc
