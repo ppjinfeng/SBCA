@@ -1,0 +1,40 @@
+# ============================================================
+# SBCA: Python Environment Requirements
+# Tested on: Windows 11, Python 3.10, CUDA 12.6, RTX 3060 12GB
+# ============================================================
+
+# --- Deep Learning Framework ---
+torch>=2.0.0                # PyTorch (GPU via CUDA)
+# Install with CUDA support:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+# --- Data Processing ---
+numpy>=1.24.0               # Numerical computation
+pandas>=2.0.0               # Data loading and CSV output
+
+# --- Visualization ---
+matplotlib>=3.7.0           # Plotting (training curves, PV trajectories)
+
+# --- Scientific Computing ---
+scipy>=1.10.0               # Statistical tests (t-test, Wilcoxon)
+
+# --- NLP / BERT ---
+transformers>=4.30.0        # HuggingFace Transformers (BERT model)
+
+# --- Machine Learning ---
+scikit-learn>=1.3.0         # Data standardization
+
+# --- Utilities ---
+tqdm>=4.65.0                # Progress bars
+
+# ============================================================
+# Notes:
+# 1. CUDA Toolkit 12.x and compatible NVIDIA driver required for GPU
+# 2. Consider using conda for easier CUDA setup:
+#      conda create -n SBCA python=3.10
+#      conda activate SBCA
+#      conda install pytorch pytorch-cuda=12.1 -c pytorch -c nvidia
+#      pip install -r requirements.txt
+# 3. BERT model weights are downloaded automatically on first run
+#    from HuggingFace Hub (bert-base-uncased)
+# ============================================================

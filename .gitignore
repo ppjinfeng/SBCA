@@ -1,0 +1,20 @@
+# Paper source (not part of code repository)
+elsarticle-template-harv.tex
+elsarticle-template-harv.*
+sn-bibliography.bib
+elsarticle-harv.bst
+*.bst
+
+# Temp Excel
+~$*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+
+# Trained models
+models_bert/
+
+# OS
+.DS_Store
+Thumbs.db
