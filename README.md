@@ -4,7 +4,7 @@ This repository contains the official implementation of the paper:
 
 > **SBCA: Cross-Modal BERT-driven Actor-Critic for Multi-Asset Portfolio Optimization**
 >
-> Jinfeng Pan, Mi Liu, Xiao Ping, Jiahao Chen
+> Anonymous Authors
 >
 > Submitted to *Financial Innovation*
 
@@ -121,7 +121,7 @@ Output files are saved to the `result/` directory in CSV format. Key metrics inc
 ```bibtex
 @article{pan2026sbca,
   title={SBCA: Cross-Modal BERT-driven Actor-Critic for Multi-Asset Portfolio Optimization},
-  author={Jinfeng Pan, Mi Liu, Xiao Ping, Jiahao Chen},
+  author={Anonymous},
   year={2026},
 }
 ```
