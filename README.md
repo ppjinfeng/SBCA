@@ -12,7 +12,6 @@ This repository contains the official implementation of the paper:
 
 SBCA is a deep reinforcement learning framework for dynamic portfolio optimization that integrates price time-series with BERT-based financial news sentiment through a gated cross-modal fusion mechanism, trained with a risk-sensitive Actor-Critic architecture.
 
-![Framework](Framework.png)
 
 ## Repository Structure
 

@@ -1,4 +1,0 @@
-Comparison,N_groups,Mean_diff,Std_diff,t_stat,p_paired_t,Wins,Losses,p_sign_test
-SBCA_vs_EW,11,0.0744,0.0389,6.34,4.2e-05,10,1,0.005859
-SBCA_vs_PPO,11,0.0073,0.0067,3.6,0.002427,9,2,0.032715
-SBCA_vs_BH,11,0.1957,0.1922,3.38,0.003524,10,1,0.005859
