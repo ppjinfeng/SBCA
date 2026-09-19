@@ -4,8 +4,8 @@ Table 5 of the manuscript now come from the same runs."""
 import io
 import pandas as pd
 
-OUT_TS = r"H:\老婆\v3\analysis\out_ts"
-DEST = r"H:\老婆\v3\supplementary\_tables_new.tex"
+OUT_TS = "../results"
+DEST = "../supplementary/_tables_new.tex"
 
 GROUPS = ["2assets", "4assets", "6assets"]
 METRICS = ["PV", "AR", "SR", "Sortino", "MDD", "Calmar"]

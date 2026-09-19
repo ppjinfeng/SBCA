@@ -4,7 +4,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-OUT = r"H:\老婆\v3\supplementary\_tables_new.tex"
+OUT = "../supplementary/_tables_new.tex"
 
 # ---------------------------------------------------------------- published
 PUB = {
@@ -34,7 +34,7 @@ def star(p):
 def table_s5():
     lines, maxdev = [], 0.0
     for gi, g in enumerate(GROUPS):
-        rep = pd.read_csv(rf"H:\老婆\v3\analysis\out\ablation_metrics_{g}.csv")
+        rep = pd.read_csv(rf"../results_pre_correction/ablation_metrics_{g}.csv")
         for mi, m in enumerate(MODELS):
             r = rep[rep.Model == m].iloc[0]
             pub = PUB[(g, m)]
@@ -66,7 +66,7 @@ def table_s4():
 
 
 def table_s3():
-    df = pd.read_csv(r"H:\老婆\v3\analysis\out\blocklength_sensitivity.csv")
+    df = pd.read_csv("../results_pre_correction/blocklength_sensitivity.csv")
     out = []
     for fam in ["external", "internal"]:
         sub = df[df.Family == fam]

@@ -12,7 +12,7 @@ replication series, so the two can be compared.  Percentile 95% intervals come
 from the same paired circular block bootstrap used elsewhere (30,000 resamples,
 block length 60), with the SAME block index applied to all four variants.
 
-Output: ./out/factorial_ci.csv  and  ./out/factorial_ci_summary.txt
+Output: runs/factorial_ci.csv  and  ./out/factorial_ci_summary.txt
 """
 import os
 import sys
@@ -65,12 +65,12 @@ def contrasts_from_metrics(m):
 
 
 def main():
-    os.makedirs("./out", exist_ok=True)
+    os.makedirs("runs", exist_ok=True)
     rng = np.random.default_rng(RNG_SEED)
     rows = []
     lines = []
     for g in GROUPS:
-        df = pd.read_csv(f"./out/ablation_rets_{g}.csv")
+        df = pd.read_csv(f"results/ablation_rets_{g}.csv")
         series = {v: df[v].values for v in VARIANTS}
         n = min(len(s) for s in series.values())
         series = {v: s[:n] for v, s in series.items()}
@@ -120,9 +120,9 @@ def main():
         lines.append("")
         print("\n".join(lines[-22:]), flush=True)
 
-    pd.DataFrame(rows).to_csv("./out/factorial_ci.csv", index=False)
+    pd.DataFrame(rows).to_csv("runs/factorial_ci.csv", index=False)
     txt = "\n".join(lines)
-    with open("./out/factorial_ci_summary.txt", "w", encoding="utf-8") as f:
+    with open("runs/factorial_ci_summary.txt", "w", encoding="utf-8") as f:
         f.write(txt + "\n")
     n_excl = sum(1 for r in rows if r["excludes_zero"] == "yes")
     print(f"\nContrasts whose 95% CI excludes zero: {n_excl} of {len(rows)}")

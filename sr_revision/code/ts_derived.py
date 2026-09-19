@@ -12,10 +12,12 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import run_all_timesplit as RT
+os.environ.setdefault("SBCA_FEATURES", "data/bert_pred_for_SARL_timesplit.csv")
+import run_all_old as RT
 from blocklength_sensitivity import metrics_2d, bootstrap_pvalues
 
-OUT = "./out_ts"
+IN = "results"
+OUT = "runs"
 GROUPS = [("2assets", 2), ("4assets", 4), ("6assets", 6)]
 BLOCKS = [20, 40, 60, 120]
 METRICS = ["AR", "SR", "Sortino", "MDD"]
@@ -47,7 +49,7 @@ def main():
     bl_rows, fac_rows = [], []
 
     for gname, k in GROUPS:
-        df = pd.read_csv(f"{OUT}/ablation_rets_{gname}.csv")
+        df = pd.read_csv(f"{IN}/ablation_rets_{gname}.csv")
         sbca = df["SBCA"].values
         close = RT.df_close[RT.all_stocks[:k]].values
         env = RT.StockEnv(close, RT.df_delta[RT.all_stocks[:k]].values)

@@ -26,9 +26,9 @@ from torch.utils.data import Dataset, DataLoader
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-SRC = r"H:\老婆\code\stock_news_trading_data.csv"
-OLD = r"H:\老婆\code\bert_pred_for_SARL.csv"
-OUTDIR = r"H:\老婆\v3\analysis\out"
+SRC = os.environ.get("SBCA_RAW_NEWS", "data/stock_news_trading_data.csv")
+OLD = os.environ.get("SBCA_ORIGINAL_FEATURES", "data/bert_pred_for_SARL.csv")
+OUTDIR = "runs"
 BERT_NAME = "bert-base-uncased"
 TRAIN_END = pd.Timestamp("2018-12-31")   # RL training period ends here
 MAX_LEN = 64

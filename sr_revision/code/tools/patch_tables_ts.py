@@ -6,8 +6,8 @@ import re
 import sys
 import pandas as pd
 
-MAIN = r"H:\老婆\v3\SBCA-SR.tex"
-OUT = r"H:\老婆\v3\analysis\out_ts"
+MAIN = os.environ.get("SBCA_TEX", "../SBCA-SR.tex")
+OUT = "../results"
 
 METRICS = ["PV", "AR", "SR", "Sortino", "MDD", "Calmar"]
 MODELS = ["SB", "SBA", "SBC", "SBCA"]

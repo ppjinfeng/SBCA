@@ -11,15 +11,14 @@ import os
 import shutil
 from PIL import Image, ImageDraw, ImageFont
 
-BASE = r"H:\老婆\v3"
-PLOTS = os.path.join(BASE, "analysis", "ts_run", "Plots")
+BASE = "."
+PLOTS = os.path.join(BASE, "Plots")
 GAP = 20
 STRIP = 82
 
 
 def font(size=46):
-    for p in [r"C:\ProgramData\anaconda3\Lib\site-packages\matplotlib\mpl-data\fonts\ttf\DejaVuSans.ttf",
-              r"C:\Windows\Fonts\arial.ttf"]:
+    for p in [r"C:/Windows/Fonts/arial.ttf"]:
         if os.path.exists(p):
             return ImageFont.truetype(p, size)
     return ImageFont.load_default()
@@ -62,7 +61,7 @@ def main():
 
     # supplementary trading-signal figures
     src = os.path.join(PLOTS, "individual_stocks")
-    dst = os.path.join(BASE, "supplementary")
+    dst = os.path.join(BASE, "runs", "supplementary")
     n = 0
     for f in os.listdir(src):
         if f.startswith("SARL_BERT") and f.endswith(".png"):

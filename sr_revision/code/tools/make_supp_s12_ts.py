@@ -2,8 +2,8 @@
 import io
 import pandas as pd
 
-SI = r"H:\老婆\v3\supplementary\supplementary.tex"
-RES = r"H:\老婆\v3\analysis\ts_run\result"
+SI = os.environ.get("SBCA_SUPP", "../supplementary/supplementary.tex")
+RES = "../runs/result"
 GROUPS = ["2assets", "4assets", "6assets"]
 METRICS = ["PV", "AR", "SR", "Sortino", "MDD", "Calmar"]
 

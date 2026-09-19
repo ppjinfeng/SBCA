@@ -6,7 +6,7 @@ asset groups, then runs the same circular block-bootstrap one-sided test used
 for the external-baseline comparison, but between SBCA and each internal
 ablation variant.
 
-Outputs (./out):
+Outputs (./runs):
   ablation_rets_<group>.csv      daily net log returns per variant
   ablation_metrics_<group>.csv   PV/AR/SR/Sortino/MDD/Calmar per variant
   ablation_bootstrap_internal.xlsx   pairwise one-sided p-values
@@ -18,7 +18,8 @@ import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import run_all_timesplit as R
+os.environ.setdefault("SBCA_FEATURES", "data/bert_pred_for_SARL_timesplit.csv")
+import run_all_old as R          # the suite is parameterised by SBCA_FEATURES
 
 SEED = 42
 METRICS = ["AR", "SR", "Sortino", "MDD"]
@@ -67,14 +68,14 @@ def run_group(stocks, suffix):
 
     n = min(len(v) for v in rets.values())
     df_rets = pd.DataFrame({k: v[:n] for k, v in rets.items()})
-    df_rets.to_csv(f"./out_ts/ablation_rets_{suffix}.csv", index=False)
-    pd.DataFrame(metrics_rows).to_csv(f"./out_ts/ablation_metrics_{suffix}.csv", index=False)
-    pd.DataFrame(pv_series).to_csv(f"./out_ts/ablation_pv_{suffix}.csv", index=False)
+    df_rets.to_csv(f"./runs/ablation_rets_{suffix}.csv", index=False)
+    pd.DataFrame(metrics_rows).to_csv(f"./runs/ablation_metrics_{suffix}.csv", index=False)
+    pd.DataFrame(pv_series).to_csv(f"./runs/ablation_pv_{suffix}.csv", index=False)
     return rets, metrics_rows
 
 
 def main():
-    os.makedirs("./out_ts", exist_ok=True)
+    os.makedirs("./runs", exist_ok=True)
     stock_groups = [
         (R.all_stocks[:2], "2assets"),
         (R.all_stocks[:4], "4assets"),
@@ -103,7 +104,7 @@ def main():
 
     df_metrics = pd.DataFrame(metric_rows)
     df_boot = pd.DataFrame(boot_rows)
-    with pd.ExcelWriter("./out_ts/ablation_bootstrap_internal.xlsx") as w:
+    with pd.ExcelWriter("./runs/ablation_bootstrap_internal.xlsx") as w:
         df_boot.to_excel(w, sheet_name="InternalBootstrap", index=False)
         df_metrics.to_excel(w, sheet_name="AblationMetrics", index=False)
     print("\nSaved ./out/ablation_bootstrap_internal.xlsx", flush=True)

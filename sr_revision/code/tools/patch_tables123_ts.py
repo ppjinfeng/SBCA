@@ -4,9 +4,9 @@ import io
 import numpy as np
 import pandas as pd
 
-MAIN = r"H:\老婆\v3\SBCA-SR.tex"
-OUT_TS = r"H:\老婆\v3\analysis\out_ts"
-TSRUN = r"H:\老婆\v3\analysis\ts_run\result"
+MAIN = os.environ.get("SBCA_TEX", "../SBCA-SR.tex")
+OUT_TS = "../results"
+TSRUN = "../runs/result"
 
 # price-only baselines: unaffected by the sentiment feature
 BASE = {

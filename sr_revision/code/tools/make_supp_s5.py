@@ -4,9 +4,9 @@ import io
 import os
 import shutil
 
-SRC = r"H:\老婆\v3\supplementary\_tables_new.tex"
-DST = r"H:\老婆\v3\supplementary\tables_s3_s5.tex"
-ROWS = r"H:\老婆\v3\analysis\out_ts\bert_audit_rows.tex"
+SRC = os.environ.get("SBCA_SUPP_TMPL", "../supplementary/_tables_new.tex")
+DST = os.environ.get("SBCA_SUPP_OUT", "../supplementary/tables_s3_s5.tex")
+ROWS = "../runs/bert_audit_rows.tex"
 
 rows = io.open(ROWS, encoding="utf-8").read()
 

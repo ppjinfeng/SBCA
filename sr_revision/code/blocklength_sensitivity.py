@@ -9,8 +9,8 @@ run_all_old.block_bootstrap_one_sided_test.
 The bootstrap is vectorised for speed; a sanity check against the original
 (non-vectorised) implementation is printed before the sweep.
 
-Input : ./out/ablation_rets_{2,4,6}assets.csv  (daily net log returns per variant)
-Output: ./out/blocklength_sensitivity.csv
+Input : results/ablation_rets_{2,4,6}assets.csv  (daily net log returns per variant)
+Output: runs/blocklength_sensitivity.csv
         ./out/blocklength_sensitivity_summary.txt
 """
 import os
@@ -90,8 +90,8 @@ def bootstrap_pvalues(a, b, block, n_boot=N_BOOT, rng=None, version="vector"):
 
 def main():
     # ---------------- sanity check against the original implementation ----
-    a = pd.read_csv("./out/ablation_rets_2assets.csv")["SBCA"].values
-    b = pd.read_csv("./out/ablation_rets_2assets.csv")["SB"].values
+    a = pd.read_csv("results/ablation_rets_2assets.csv")["SBCA"].values
+    b = pd.read_csv("results/ablation_rets_2assets.csv")["SB"].values
     print("sanity check: 2assets SBCA vs SB, block = 60", flush=True)
     np.random.seed(RNG_SEED)
     R.BLOCK_SIZE = 60
@@ -105,7 +105,7 @@ def main():
     rows = []
     groups = [("2assets", 2), ("4assets", 4), ("6assets", 6)]
     for gname, k in groups:
-        df = pd.read_csv(f"./out/ablation_rets_{gname}.csv")
+        df = pd.read_csv(f"results/ablation_rets_{gname}.csv")
         sbca = df["SBCA"].values
         close_arr = R.df_close[R.all_stocks[:k]].values
         delta_arr = R.df_delta[R.all_stocks[:k]].values
@@ -143,7 +143,8 @@ def main():
             print(f"  [{gname}] external SBCA vs {bname}: done", flush=True)
 
     df = pd.DataFrame(rows)
-    df.to_csv("./out/blocklength_sensitivity.csv", index=False)
+    os.makedirs("runs", exist_ok=True)
+    df.to_csv("runs/blocklength_sensitivity.csv", index=False)
 
     lines = ["Block-length sensitivity (30,000 resamples, one-sided, H0-centred)",
              "block lengths: %s" % BLOCKS, ""]
@@ -157,7 +158,7 @@ def main():
         lines.append(piv.to_string())
         lines.append("")
     txt = "\n".join(lines)
-    with open("./out/blocklength_sensitivity_summary.txt", "w", encoding="utf-8") as f:
+    with open("runs/blocklength_sensitivity_summary.txt", "w", encoding="utf-8") as f:
         f.write(txt + "\n")
     print("\n" + txt, flush=True)
     print("\nSaved ./out/blocklength_sensitivity.csv")

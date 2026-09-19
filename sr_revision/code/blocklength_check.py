@@ -29,7 +29,7 @@ BASE_DEFS = [("bh", "Buy & Hold", "simple"),
 
 
 def main():
-    sbca = pd.read_csv("./out/ablation_rets_2assets.csv")["SBCA"].values
+    sbca = pd.read_csv("results/ablation_rets_2assets.csv")["SBCA"].values
     stocks = R.all_stocks[:2]
     close_arr = R.df_close[stocks].values
     TE = range(R.val_end, len(close_arr) - 1)
@@ -57,7 +57,7 @@ def main():
                       f"p={p:.4f}  published={pub:.4f}  "
                       f"{'<-- match' if abs(p - pub) < 0.0006 else ''}", flush=True)
 
-    pd.DataFrame(rows).to_csv("./out/blocklength_check.csv", index=False)
+    pd.DataFrame(rows).to_csv("runs/blocklength_check.csv", index=False)
     print("\nSaved ./out/blocklength_check.csv")
 
 

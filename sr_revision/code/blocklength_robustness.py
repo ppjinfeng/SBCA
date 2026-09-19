@@ -26,7 +26,7 @@ GROUPS = [("2assets", 2), ("4assets", 4), ("6assets", 6)]
 def main():
     rows = []
     for suffix, k in GROUPS:
-        sbca = pd.read_csv(f"./out/ablation_rets_{suffix}.csv")["SBCA"].values
+        sbca = pd.read_csv(f"results/ablation_rets_{suffix}.csv")["SBCA"].values
         stocks = R.all_stocks[:k]
         close_arr = R.df_close[stocks].values
         env = R.StockEnv(close_arr, R.df_delta[stocks].values)
@@ -52,7 +52,7 @@ def main():
                     print(f"  block={block:3d} {bname:13s} {metric:8s} p={p:.4f} {sig}", flush=True)
 
     df = pd.DataFrame(rows)
-    df.to_csv("./out/blocklength_robustness.csv", index=False)
+    df.to_csv("runs/blocklength_robustness.csv", index=False)
     pivot = df.pivot_table(index=["Group", "baseline", "metric"], columns="block",
                            values="p", aggfunc="first")
     print("\n=== p-value comparison: block=8 (n^1/3) vs block=60 ===\n")

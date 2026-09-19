@@ -100,7 +100,15 @@ LOOKBACK_DAYS   = 60 * 21
 # ===========================================================================
 # SECTION 2: Data Loading
 # ===========================================================================
-csv_path = "bert_pred_for_SARL.csv"
+csv_path = os.environ.get("SBCA_FEATURES", "data/bert_pred_for_SARL.csv")
+if not os.path.exists(csv_path):
+    raise SystemExit(
+        "Feature file not found: %s\n"
+        "Run this script from the sr_revision/ directory, or point SBCA_FEATURES at\n"
+        "the feature table, e.g.\n"
+        "  Windows:  set SBCA_FEATURES=data\\bert_pred_for_SARL_timesplit.csv\n"
+        "  bash:     export SBCA_FEATURES=data/bert_pred_for_SARL_timesplit.csv\n"
+        "See data/README.md for where to obtain the input files." % csv_path)
 df = pd.read_csv(csv_path)
 df = df.dropna(subset=["close", "delta_bert"])
 df["Date"] = pd.to_datetime(df["Date"])

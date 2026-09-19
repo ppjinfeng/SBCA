@@ -14,8 +14,8 @@ import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-OUT = r"H:\老婆\v3\analysis\out"
-OUT_TS = r"H:\老婆\v3\analysis\out_ts"
+OUT = "runs"
+OUT_TS = "runs"
 N_BOOT = 2000
 SEED = 20260920
 PERIODS = [("2012--2018 (RL training)", "2012-01-01", "2018-12-31"),
@@ -55,7 +55,7 @@ def auc_ci(y, s, rng, n_boot=N_BOOT):
 def main():
     old = pd.read_csv(os.path.join(OUT, "bert_pred_timesplit.csv"))
     old["Date"] = pd.to_datetime(old["Date"])
-    orig = pd.read_csv(r"H:\老婆\code\bert_pred_for_SARL.csv")[["Date", "Stock_symbol", "label", "delta_bert"]]
+    orig = pd.read_csv(os.environ.get("SBCA_ORIGINAL_FEATURES", "data/bert_pred_for_SARL.csv"))[["Date", "Stock_symbol", "label", "delta_bert"]]
     orig["Date"] = pd.to_datetime(orig["Date"])
     old = old.merge(orig, on=["Date", "Stock_symbol"], how="left", suffixes=("", "_o"))
     miss = old["delta_bert"].isna().sum()

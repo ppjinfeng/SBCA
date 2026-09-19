@@ -63,9 +63,13 @@ code/
                                     chronological fine-tuning split
   bert_audit.py                     per-stock, per-period AUC audit of the correction
   compose_figures.py                assembles the merged main figures
-  make_supp_s5.py                   builds Supplementary Table S5
+  smoke_test.py                     environment / import / bootstrap self-check
   tools/                            scripts that regenerate the manuscript's LaTeX
                                     tables from the CSVs (authors' convenience)
+
+data/                               inputs
+  README.md                         what is shipped and what must be downloaded
+  bert_pred_for_SARL_timesplit.csv  the corrected sentiment feature (12,300 rows)
 
 results/                            outputs used in the revised manuscript
   ablation_metrics_<group>.csv      Table 4 point estimates
@@ -81,40 +85,89 @@ results/                            outputs used in the revised manuscript
   factorial_ci.csv                  Supplementary Table S4
   external_bh_survivors.csv         which external tests survive BH control
   param_counts.csv                  trainable parameter counts of the four variants
-  results/bert/                     corrected sentiment feature + correction audit
+  bert/                             correction audit (Supplementary Table S5)
 
 results_pre_correction/             the pre-correction run, retained so that the
                                     before/after comparison in the response letter
                                     can be reproduced
+
+runs/                               written by re-running the scripts (gitignored)
 ```
 
 ## 3. Reproducing the results
 
+All commands are run **from this directory** (`sr_revision/`). Committed inputs
+are read from `data/` and `results/`; anything a script produces goes to `runs/`
+(and to `result/`, `Plots/`, `logs/`, `models/` for the training suite), all of
+which are gitignored.
+
 ```bash
 pip install -r requirements.txt
 
-# 1. re-derive the sentiment feature with a chronological fine-tuning split
-#    (needs stock_news_trading_data.csv; writes bert_pred_for_SARL_timesplit.csv)
-python code/bert_timesplit.py
+# 0. check the environment first -- takes about a minute and trains nothing
+python code/smoke_test.py
+#    -> verifies packages, the committed inputs, that every module imports, and
+#       replays a 400-resample bootstrap against the committed p-values
 
-# 2. audit the correction (per-stock, per-period AUC) -- needs the original
-#    bert_pred_for_SARL.csv for the "before" column
-python code/bert_audit.py
-
-# 3. re-train the four ablation variants and run the internal bootstrap tests
-#    (~45 min on an RTX 3060; writes results/ablation_*)
-python code/ablation_bootstrap_timesplit.py
-
-# 4. block-length sweep and factorial confidence intervals
+# 1. block-length sweep and factorial confidence intervals
+#    (reads results/ablation_rets_*.csv; writes runs/)
 python code/ts_derived.py
 
-# 5. external-baseline bootstrap, cost sensitivity and hyperparameter sweeps
-#    (run_all_timesplit.py is generated from run_all_old.py by pointing csv_path
-#    at bert_pred_for_SARL_timesplit.csv; see the driver in the manuscript repo)
+# 2. linear-scale bootstrap against the four closed-form baselines
+python code/blocklength_check.py
+python code/blocklength_robustness.py
+python code/blocklength_sensitivity.py
+
+# 3. factorial contrasts with confidence intervals
+python code/factorial_ci.py
 ```
 
-The scripts expect `bert_pred_for_SARL_timesplit.csv` and
-`stock_news_trading_data.csv` in the working directory.
+Steps 1–3 reproduce **Supplementary Tables S3 and S4** and the factorial
+intervals reported in Section 6.2 of the manuscript, using only the files shipped
+here.
+
+The remaining steps need inputs that are not shipped (see `data/README.md`) and
+are considerably more expensive:
+
+```bash
+# 4. re-train the four ablation variants on the corrected features and run the
+#    internal bootstrap tests -- ~45 min on an RTX 3060. Reproduces Tables 4 and 5.
+#    Needs data/bert_pred_for_SARL_timesplit.csv (shipped) and writes runs/.
+python code/ablation_bootstrap_timesplit.py
+
+# 5. external-baseline bootstrap, cost sensitivity and hyperparameter sweeps.
+#    These read the same feature table; run_all_old.py takes the path from the
+#    SBCA_FEATURES environment variable, so no copy of the suite is needed:
+#      Windows :  set SBCA_FEATURES=data\bert_pred_for_SARL_timesplit.csv
+#      bash    :  export SBCA_FEATURES=data/bert_pred_for_SARL_timesplit.csv
+python code/run_all_old.py --mode bootstrap
+python code/run_all_old.py --mode cost_sensitivity_fixed
+python code/run_all_old.py --mode sensitivity
+
+# 6. re-derive the sentiment feature with a chronological fine-tuning split.
+#    Needs data/stock_news_trading_data.csv; downloads bert-base-uncased.
+python code/bert_timesplit.py
+
+# 7. audit the correction (per-stock, per-period AUC). Needs the original
+#    data/bert_pred_for_SARL.csv for the "before" column. Reproduces Table S5.
+python code/bert_audit.py
+```
+
+`code/run_all_old.py` is the single experiment suite. It reads its feature table
+from `SBCA_FEATURES` (default `data/bert_pred_for_SARL.csv`), which is how the
+same code serves both the corrected and the pre-correction runs; pointing it at
+`data/bert_pred_for_SARL_timesplit.csv` gives the runs reported in the revised
+manuscript.
+
+`code/tools/` holds the scripts that turn the CSVs into the LaTeX tables of the
+manuscript. They are authors' convenience tooling and assume a source tree
+containing the `.tex` files; they are not needed to reproduce any number.
+
+### What the smoke test does not cover
+
+Step 4 trains models and step 6 downloads a pre-trained encoder; neither is
+exercised by `smoke_test.py`. Everything that runs purely on the committed series
+is.
 
 ## 4. Statistical procedure, exactly as implemented
 

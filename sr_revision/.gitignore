@@ -1,0 +1,11 @@
+# Outputs produced by re-running the scripts. The committed, authoritative
+# copies live in results/ and results_pre_correction/.
+runs/
+result/
+Plots/
+logs/
+models/
+
+# Python
+__pycache__/
+*.pyc
