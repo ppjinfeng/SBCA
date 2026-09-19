@@ -1,0 +1,26 @@
+# Environment actually used to produce the results reported in the manuscript.
+# Python 3.10.16 on Windows; single NVIDIA GeForce RTX 3060 (12 GB), CUDA 11.8.
+#
+# NOTE ON THE PREVIOUSLY RELEASED FILE
+# The requirements.txt shipped with the earlier version of this repository pinned
+# torch==1.13.1, which was the environment used for the original (pre-correction)
+# runs. The results reported in the revised manuscript were produced with the
+# versions below, which are the ones that should be used to reproduce them.
+
+# --- deep learning ---
+torch==2.6.0+cu118
+transformers==4.51.1
+
+# --- scientific stack ---
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.15.3
+scikit-learn==1.5.1
+
+# --- visualisation ---
+matplotlib==3.10.9
+openpyxl==3.1.5
+
+# --- utilities ---
+tqdm==4.67.1
+requests

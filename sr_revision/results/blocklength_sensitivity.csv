@@ -1,0 +1,337 @@
+Group,Family,Comparison,Metric,block,p_value
+2assets,internal,SBCA vs SB,AR,20,0.0573
+2assets,internal,SBCA vs SB,SR,20,0.0436
+2assets,internal,SBCA vs SB,Sortino,20,0.0418
+2assets,internal,SBCA vs SB,MDD,20,0.0308
+2assets,internal,SBCA vs SB,AR,40,0.0569
+2assets,internal,SBCA vs SB,SR,40,0.0498
+2assets,internal,SBCA vs SB,Sortino,40,0.032
+2assets,internal,SBCA vs SB,MDD,40,0.0358
+2assets,internal,SBCA vs SB,AR,60,0.0553
+2assets,internal,SBCA vs SB,SR,60,0.054
+2assets,internal,SBCA vs SB,Sortino,60,0.0315
+2assets,internal,SBCA vs SB,MDD,60,0.0428
+2assets,internal,SBCA vs SB,AR,120,0.0256
+2assets,internal,SBCA vs SB,SR,120,0.0368
+2assets,internal,SBCA vs SB,Sortino,120,0.0076
+2assets,internal,SBCA vs SB,MDD,120,0.062
+2assets,internal,SBCA vs SBA,AR,20,0.4426
+2assets,internal,SBCA vs SBA,SR,20,0.2648
+2assets,internal,SBCA vs SBA,Sortino,20,0.1754
+2assets,internal,SBCA vs SBA,MDD,20,0.0795
+2assets,internal,SBCA vs SBA,AR,40,0.4217
+2assets,internal,SBCA vs SBA,SR,40,0.2465
+2assets,internal,SBCA vs SBA,Sortino,40,0.1569
+2assets,internal,SBCA vs SBA,MDD,40,0.0686
+2assets,internal,SBCA vs SBA,AR,60,0.4246
+2assets,internal,SBCA vs SBA,SR,60,0.2503
+2assets,internal,SBCA vs SBA,Sortino,60,0.1466
+2assets,internal,SBCA vs SBA,MDD,60,0.0736
+2assets,internal,SBCA vs SBA,AR,120,0.4136
+2assets,internal,SBCA vs SBA,SR,120,0.2373
+2assets,internal,SBCA vs SBA,Sortino,120,0.1312
+2assets,internal,SBCA vs SBA,MDD,120,0.0762
+2assets,internal,SBCA vs SBC,AR,20,0.0315
+2assets,internal,SBCA vs SBC,SR,20,0.0134
+2assets,internal,SBCA vs SBC,Sortino,20,0.015
+2assets,internal,SBCA vs SBC,MDD,20,0.0022
+2assets,internal,SBCA vs SBC,AR,40,0.0266
+2assets,internal,SBCA vs SBC,SR,40,0.0101
+2assets,internal,SBCA vs SBC,Sortino,40,0.0064
+2assets,internal,SBCA vs SBC,MDD,40,0.0028
+2assets,internal,SBCA vs SBC,AR,60,0.0191
+2assets,internal,SBCA vs SBC,SR,60,0.0053
+2assets,internal,SBCA vs SBC,Sortino,60,0.0018
+2assets,internal,SBCA vs SBC,MDD,60,0.003
+2assets,internal,SBCA vs SBC,AR,120,0.007
+2assets,internal,SBCA vs SBC,SR,120,0.0014
+2assets,internal,SBCA vs SBC,Sortino,120,0.0
+2assets,internal,SBCA vs SBC,MDD,120,0.0017
+2assets,external,SBCA vs Buy & Hold,AR,20,0.0068
+2assets,external,SBCA vs Buy & Hold,SR,20,0.0002
+2assets,external,SBCA vs Buy & Hold,Sortino,20,0.0027
+2assets,external,SBCA vs Buy & Hold,MDD,20,0.0089
+2assets,external,SBCA vs Buy & Hold,AR,40,0.0031
+2assets,external,SBCA vs Buy & Hold,SR,40,0.0001
+2assets,external,SBCA vs Buy & Hold,Sortino,40,0.001
+2assets,external,SBCA vs Buy & Hold,MDD,40,0.01
+2assets,external,SBCA vs Buy & Hold,AR,60,0.0012
+2assets,external,SBCA vs Buy & Hold,SR,60,0.0
+2assets,external,SBCA vs Buy & Hold,Sortino,60,0.0009
+2assets,external,SBCA vs Buy & Hold,MDD,60,0.0116
+2assets,external,SBCA vs Buy & Hold,AR,120,0.0007
+2assets,external,SBCA vs Buy & Hold,SR,120,0.0
+2assets,external,SBCA vs Buy & Hold,Sortino,120,0.0002
+2assets,external,SBCA vs Buy & Hold,MDD,120,0.0089
+2assets,external,SBCA vs Equal Weight,AR,20,0.0295
+2assets,external,SBCA vs Equal Weight,SR,20,0.0077
+2assets,external,SBCA vs Equal Weight,Sortino,20,0.0169
+2assets,external,SBCA vs Equal Weight,MDD,20,0.036
+2assets,external,SBCA vs Equal Weight,AR,40,0.0235
+2assets,external,SBCA vs Equal Weight,SR,40,0.0009
+2assets,external,SBCA vs Equal Weight,Sortino,40,0.0099
+2assets,external,SBCA vs Equal Weight,MDD,40,0.0313
+2assets,external,SBCA vs Equal Weight,AR,60,0.0148
+2assets,external,SBCA vs Equal Weight,SR,60,0.0004
+2assets,external,SBCA vs Equal Weight,Sortino,60,0.0043
+2assets,external,SBCA vs Equal Weight,MDD,60,0.0369
+2assets,external,SBCA vs Equal Weight,AR,120,0.0087
+2assets,external,SBCA vs Equal Weight,SR,120,0.0
+2assets,external,SBCA vs Equal Weight,Sortino,120,0.0016
+2assets,external,SBCA vs Equal Weight,MDD,120,0.0267
+2assets,external,SBCA vs Dow Jones,AR,20,0.3277
+2assets,external,SBCA vs Dow Jones,SR,20,0.1156
+2assets,external,SBCA vs Dow Jones,Sortino,20,0.0889
+2assets,external,SBCA vs Dow Jones,MDD,20,0.0421
+2assets,external,SBCA vs Dow Jones,AR,40,0.2944
+2assets,external,SBCA vs Dow Jones,SR,40,0.0976
+2assets,external,SBCA vs Dow Jones,Sortino,40,0.0851
+2assets,external,SBCA vs Dow Jones,MDD,40,0.0364
+2assets,external,SBCA vs Dow Jones,AR,60,0.2963
+2assets,external,SBCA vs Dow Jones,SR,60,0.09
+2assets,external,SBCA vs Dow Jones,Sortino,60,0.0789
+2assets,external,SBCA vs Dow Jones,MDD,60,0.0398
+2assets,external,SBCA vs Dow Jones,AR,120,0.2715
+2assets,external,SBCA vs Dow Jones,SR,120,0.0673
+2assets,external,SBCA vs Dow Jones,Sortino,120,0.0679
+2assets,external,SBCA vs Dow Jones,MDD,120,0.0327
+2assets,external,SBCA vs MVO,AR,20,0.373
+2assets,external,SBCA vs MVO,SR,20,0.1168
+2assets,external,SBCA vs MVO,Sortino,20,0.0995
+2assets,external,SBCA vs MVO,MDD,20,0.0422
+2assets,external,SBCA vs MVO,AR,40,0.3416
+2assets,external,SBCA vs MVO,SR,40,0.1054
+2assets,external,SBCA vs MVO,Sortino,40,0.0996
+2assets,external,SBCA vs MVO,MDD,40,0.0383
+2assets,external,SBCA vs MVO,AR,60,0.3402
+2assets,external,SBCA vs MVO,SR,60,0.1007
+2assets,external,SBCA vs MVO,Sortino,60,0.0997
+2assets,external,SBCA vs MVO,MDD,60,0.0382
+2assets,external,SBCA vs MVO,AR,120,0.3167
+2assets,external,SBCA vs MVO,SR,120,0.0869
+2assets,external,SBCA vs MVO,Sortino,120,0.1018
+2assets,external,SBCA vs MVO,MDD,120,0.0304
+4assets,internal,SBCA vs SB,AR,20,0.0465
+4assets,internal,SBCA vs SB,SR,20,0.0245
+4assets,internal,SBCA vs SB,Sortino,20,0.0316
+4assets,internal,SBCA vs SB,MDD,20,0.5608
+4assets,internal,SBCA vs SB,AR,40,0.0575
+4assets,internal,SBCA vs SB,SR,40,0.0341
+4assets,internal,SBCA vs SB,Sortino,40,0.0433
+4assets,internal,SBCA vs SB,MDD,40,0.6029
+4assets,internal,SBCA vs SB,AR,60,0.0746
+4assets,internal,SBCA vs SB,SR,60,0.041
+4assets,internal,SBCA vs SB,Sortino,60,0.0572
+4assets,internal,SBCA vs SB,MDD,60,0.6383
+4assets,internal,SBCA vs SB,AR,120,0.1103
+4assets,internal,SBCA vs SB,SR,120,0.0434
+4assets,internal,SBCA vs SB,Sortino,120,0.0768
+4assets,internal,SBCA vs SB,MDD,120,0.6348
+4assets,internal,SBCA vs SBA,AR,20,0.4946
+4assets,internal,SBCA vs SBA,SR,20,0.769
+4assets,internal,SBCA vs SBA,Sortino,20,0.7944
+4assets,internal,SBCA vs SBA,MDD,20,0.9317
+4assets,internal,SBCA vs SBA,AR,40,0.503
+4assets,internal,SBCA vs SBA,SR,40,0.8208
+4assets,internal,SBCA vs SBA,Sortino,40,0.8424
+4assets,internal,SBCA vs SBA,MDD,40,0.9649
+4assets,internal,SBCA vs SBA,AR,60,0.5037
+4assets,internal,SBCA vs SBA,SR,60,0.8482
+4assets,internal,SBCA vs SBA,Sortino,60,0.8663
+4assets,internal,SBCA vs SBA,MDD,60,0.9657
+4assets,internal,SBCA vs SBA,AR,120,0.4875
+4assets,internal,SBCA vs SBA,SR,120,0.9368
+4assets,internal,SBCA vs SBA,Sortino,120,0.9661
+4assets,internal,SBCA vs SBA,MDD,120,0.9684
+4assets,internal,SBCA vs SBC,AR,20,0.109
+4assets,internal,SBCA vs SBC,SR,20,0.1356
+4assets,internal,SBCA vs SBC,Sortino,20,0.1331
+4assets,internal,SBCA vs SBC,MDD,20,0.7923
+4assets,internal,SBCA vs SBC,AR,40,0.115
+4assets,internal,SBCA vs SBC,SR,40,0.1425
+4assets,internal,SBCA vs SBC,Sortino,40,0.1375
+4assets,internal,SBCA vs SBC,MDD,40,0.7654
+4assets,internal,SBCA vs SBC,AR,60,0.1331
+4assets,internal,SBCA vs SBC,SR,60,0.1539
+4assets,internal,SBCA vs SBC,Sortino,60,0.1536
+4assets,internal,SBCA vs SBC,MDD,60,0.7538
+4assets,internal,SBCA vs SBC,AR,120,0.1721
+4assets,internal,SBCA vs SBC,SR,120,0.1832
+4assets,internal,SBCA vs SBC,Sortino,120,0.1861
+4assets,internal,SBCA vs SBC,MDD,120,0.7824
+4assets,external,SBCA vs Buy & Hold,AR,20,0.0024
+4assets,external,SBCA vs Buy & Hold,SR,20,0.0011
+4assets,external,SBCA vs Buy & Hold,Sortino,20,0.0021
+4assets,external,SBCA vs Buy & Hold,MDD,20,0.0335
+4assets,external,SBCA vs Buy & Hold,AR,40,0.0035
+4assets,external,SBCA vs Buy & Hold,SR,40,0.0025
+4assets,external,SBCA vs Buy & Hold,Sortino,40,0.0029
+4assets,external,SBCA vs Buy & Hold,MDD,40,0.0362
+4assets,external,SBCA vs Buy & Hold,AR,60,0.0035
+4assets,external,SBCA vs Buy & Hold,SR,60,0.0042
+4assets,external,SBCA vs Buy & Hold,Sortino,60,0.0049
+4assets,external,SBCA vs Buy & Hold,MDD,60,0.0456
+4assets,external,SBCA vs Buy & Hold,AR,120,0.0009
+4assets,external,SBCA vs Buy & Hold,SR,120,0.0032
+4assets,external,SBCA vs Buy & Hold,Sortino,120,0.003
+4assets,external,SBCA vs Buy & Hold,MDD,120,0.0806
+4assets,external,SBCA vs Equal Weight,AR,20,0.0099
+4assets,external,SBCA vs Equal Weight,SR,20,0.0109
+4assets,external,SBCA vs Equal Weight,Sortino,20,0.0151
+4assets,external,SBCA vs Equal Weight,MDD,20,0.1604
+4assets,external,SBCA vs Equal Weight,AR,40,0.0065
+4assets,external,SBCA vs Equal Weight,SR,40,0.0093
+4assets,external,SBCA vs Equal Weight,Sortino,40,0.0127
+4assets,external,SBCA vs Equal Weight,MDD,40,0.1682
+4assets,external,SBCA vs Equal Weight,AR,60,0.0046
+4assets,external,SBCA vs Equal Weight,SR,60,0.0103
+4assets,external,SBCA vs Equal Weight,Sortino,60,0.0082
+4assets,external,SBCA vs Equal Weight,MDD,60,0.1772
+4assets,external,SBCA vs Equal Weight,AR,120,0.0
+4assets,external,SBCA vs Equal Weight,SR,120,0.001
+4assets,external,SBCA vs Equal Weight,Sortino,120,0.0002
+4assets,external,SBCA vs Equal Weight,MDD,120,0.1963
+4assets,external,SBCA vs Dow Jones,AR,20,0.4073
+4assets,external,SBCA vs Dow Jones,SR,20,0.1132
+4assets,external,SBCA vs Dow Jones,Sortino,20,0.1224
+4assets,external,SBCA vs Dow Jones,MDD,20,0.0321
+4assets,external,SBCA vs Dow Jones,AR,40,0.378
+4assets,external,SBCA vs Dow Jones,SR,40,0.1008
+4assets,external,SBCA vs Dow Jones,Sortino,40,0.1138
+4assets,external,SBCA vs Dow Jones,MDD,40,0.0187
+4assets,external,SBCA vs Dow Jones,AR,60,0.3689
+4assets,external,SBCA vs Dow Jones,SR,60,0.0795
+4assets,external,SBCA vs Dow Jones,Sortino,60,0.0988
+4assets,external,SBCA vs Dow Jones,MDD,60,0.0227
+4assets,external,SBCA vs Dow Jones,AR,120,0.3761
+4assets,external,SBCA vs Dow Jones,SR,120,0.0312
+4assets,external,SBCA vs Dow Jones,Sortino,120,0.0392
+4assets,external,SBCA vs Dow Jones,MDD,120,0.0326
+4assets,external,SBCA vs MVO,AR,20,0.2262
+4assets,external,SBCA vs MVO,SR,20,0.069
+4assets,external,SBCA vs MVO,Sortino,20,0.0735
+4assets,external,SBCA vs MVO,MDD,20,0.0304
+4assets,external,SBCA vs MVO,AR,40,0.1969
+4assets,external,SBCA vs MVO,SR,40,0.0565
+4assets,external,SBCA vs MVO,Sortino,40,0.0685
+4assets,external,SBCA vs MVO,MDD,40,0.0238
+4assets,external,SBCA vs MVO,AR,60,0.2073
+4assets,external,SBCA vs MVO,SR,60,0.0436
+4assets,external,SBCA vs MVO,Sortino,60,0.0505
+4assets,external,SBCA vs MVO,MDD,60,0.0266
+4assets,external,SBCA vs MVO,AR,120,0.169
+4assets,external,SBCA vs MVO,SR,120,0.0234
+4assets,external,SBCA vs MVO,Sortino,120,0.0273
+4assets,external,SBCA vs MVO,MDD,120,0.017
+6assets,internal,SBCA vs SB,AR,20,0.5437
+6assets,internal,SBCA vs SB,SR,20,0.0847
+6assets,internal,SBCA vs SB,Sortino,20,0.4491
+6assets,internal,SBCA vs SB,MDD,20,0.0392
+6assets,internal,SBCA vs SB,AR,40,0.5355
+6assets,internal,SBCA vs SB,SR,40,0.0882
+6assets,internal,SBCA vs SB,Sortino,40,0.447
+6assets,internal,SBCA vs SB,MDD,40,0.0336
+6assets,internal,SBCA vs SB,AR,60,0.5212
+6assets,internal,SBCA vs SB,SR,60,0.0816
+6assets,internal,SBCA vs SB,Sortino,60,0.4462
+6assets,internal,SBCA vs SB,MDD,60,0.0295
+6assets,internal,SBCA vs SB,AR,120,0.4934
+6assets,internal,SBCA vs SB,SR,120,0.0652
+6assets,internal,SBCA vs SB,Sortino,120,0.4316
+6assets,internal,SBCA vs SB,MDD,120,0.019
+6assets,internal,SBCA vs SBA,AR,20,0.6179
+6assets,internal,SBCA vs SBA,SR,20,0.4527
+6assets,internal,SBCA vs SBA,Sortino,20,0.3976
+6assets,internal,SBCA vs SBA,MDD,20,0.0931
+6assets,internal,SBCA vs SBA,AR,40,0.6144
+6assets,internal,SBCA vs SBA,SR,40,0.4584
+6assets,internal,SBCA vs SBA,Sortino,40,0.4
+6assets,internal,SBCA vs SBA,MDD,40,0.0718
+6assets,internal,SBCA vs SBA,AR,60,0.61
+6assets,internal,SBCA vs SBA,SR,60,0.4605
+6assets,internal,SBCA vs SBA,Sortino,60,0.3956
+6assets,internal,SBCA vs SBA,MDD,60,0.0713
+6assets,internal,SBCA vs SBA,AR,120,0.6317
+6assets,internal,SBCA vs SBA,SR,120,0.4672
+6assets,internal,SBCA vs SBA,Sortino,120,0.41
+6assets,internal,SBCA vs SBA,MDD,120,0.0635
+6assets,internal,SBCA vs SBC,AR,20,0.2081
+6assets,internal,SBCA vs SBC,SR,20,0.4625
+6assets,internal,SBCA vs SBC,Sortino,20,0.3596
+6assets,internal,SBCA vs SBC,MDD,20,0.8555
+6assets,internal,SBCA vs SBC,AR,40,0.2051
+6assets,internal,SBCA vs SBC,SR,40,0.4748
+6assets,internal,SBCA vs SBC,Sortino,40,0.3592
+6assets,internal,SBCA vs SBC,MDD,40,0.8732
+6assets,internal,SBCA vs SBC,AR,60,0.1968
+6assets,internal,SBCA vs SBC,SR,60,0.4732
+6assets,internal,SBCA vs SBC,Sortino,60,0.3447
+6assets,internal,SBCA vs SBC,MDD,60,0.8957
+6assets,internal,SBCA vs SBC,AR,120,0.206
+6assets,internal,SBCA vs SBC,SR,120,0.4678
+6assets,internal,SBCA vs SBC,Sortino,120,0.3122
+6assets,internal,SBCA vs SBC,MDD,120,0.8922
+6assets,external,SBCA vs Buy & Hold,AR,20,0.0961
+6assets,external,SBCA vs Buy & Hold,SR,20,0.0422
+6assets,external,SBCA vs Buy & Hold,Sortino,20,0.0354
+6assets,external,SBCA vs Buy & Hold,MDD,20,0.0117
+6assets,external,SBCA vs Buy & Hold,AR,40,0.0873
+6assets,external,SBCA vs Buy & Hold,SR,40,0.0365
+6assets,external,SBCA vs Buy & Hold,Sortino,40,0.0225
+6assets,external,SBCA vs Buy & Hold,MDD,40,0.014
+6assets,external,SBCA vs Buy & Hold,AR,60,0.0499
+6assets,external,SBCA vs Buy & Hold,SR,60,0.0126
+6assets,external,SBCA vs Buy & Hold,Sortino,60,0.0067
+6assets,external,SBCA vs Buy & Hold,MDD,60,0.0121
+6assets,external,SBCA vs Buy & Hold,AR,120,0.0426
+6assets,external,SBCA vs Buy & Hold,SR,120,0.0126
+6assets,external,SBCA vs Buy & Hold,Sortino,120,0.0023
+6assets,external,SBCA vs Buy & Hold,MDD,120,0.0168
+6assets,external,SBCA vs Equal Weight,AR,20,0.7878
+6assets,external,SBCA vs Equal Weight,SR,20,0.7923
+6assets,external,SBCA vs Equal Weight,Sortino,20,0.7909
+6assets,external,SBCA vs Equal Weight,MDD,20,0.6734
+6assets,external,SBCA vs Equal Weight,AR,40,0.7823
+6assets,external,SBCA vs Equal Weight,SR,40,0.7873
+6assets,external,SBCA vs Equal Weight,Sortino,40,0.786
+6assets,external,SBCA vs Equal Weight,MDD,40,0.6503
+6assets,external,SBCA vs Equal Weight,AR,60,0.7806
+6assets,external,SBCA vs Equal Weight,SR,60,0.794
+6assets,external,SBCA vs Equal Weight,Sortino,60,0.789
+6assets,external,SBCA vs Equal Weight,MDD,60,0.591
+6assets,external,SBCA vs Equal Weight,AR,120,0.768
+6assets,external,SBCA vs Equal Weight,SR,120,0.8057
+6assets,external,SBCA vs Equal Weight,Sortino,120,0.7829
+6assets,external,SBCA vs Equal Weight,MDD,120,0.7552
+6assets,external,SBCA vs Dow Jones,AR,20,0.1595
+6assets,external,SBCA vs Dow Jones,SR,20,0.0647
+6assets,external,SBCA vs Dow Jones,Sortino,20,0.0715
+6assets,external,SBCA vs Dow Jones,MDD,20,0.0103
+6assets,external,SBCA vs Dow Jones,AR,40,0.1521
+6assets,external,SBCA vs Dow Jones,SR,40,0.0586
+6assets,external,SBCA vs Dow Jones,Sortino,40,0.0676
+6assets,external,SBCA vs Dow Jones,MDD,40,0.0123
+6assets,external,SBCA vs Dow Jones,AR,60,0.1377
+6assets,external,SBCA vs Dow Jones,SR,60,0.0424
+6assets,external,SBCA vs Dow Jones,Sortino,60,0.058
+6assets,external,SBCA vs Dow Jones,MDD,60,0.0126
+6assets,external,SBCA vs Dow Jones,AR,120,0.1298
+6assets,external,SBCA vs Dow Jones,SR,120,0.039
+6assets,external,SBCA vs Dow Jones,Sortino,120,0.0552
+6assets,external,SBCA vs Dow Jones,MDD,120,0.0196
+6assets,external,SBCA vs MVO,AR,20,0.7121
+6assets,external,SBCA vs MVO,SR,20,0.2005
+6assets,external,SBCA vs MVO,Sortino,20,0.3439
+6assets,external,SBCA vs MVO,MDD,20,0.0023
+6assets,external,SBCA vs MVO,AR,40,0.7032
+6assets,external,SBCA vs MVO,SR,40,0.1966
+6assets,external,SBCA vs MVO,Sortino,40,0.355
+6assets,external,SBCA vs MVO,MDD,40,0.0026
+6assets,external,SBCA vs MVO,AR,60,0.7042
+6assets,external,SBCA vs MVO,SR,60,0.1919
+6assets,external,SBCA vs MVO,Sortino,60,0.3694
+6assets,external,SBCA vs MVO,MDD,60,0.0011
+6assets,external,SBCA vs MVO,AR,120,0.7045
+6assets,external,SBCA vs MVO,SR,120,0.2106
+6assets,external,SBCA vs MVO,Sortino,120,0.3693
+6assets,external,SBCA vs MVO,MDD,120,0.001

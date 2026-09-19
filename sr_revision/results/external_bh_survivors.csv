@@ -1,0 +1,18 @@
+Group,Comparison,Metric,p
+2assets,SBCA vs Buy & Hold,SR,0.0
+2assets,SBCA vs Equal Weight,SR,0.000433
+2assets,SBCA vs Buy & Hold,Sortino,0.0005
+2assets,SBCA vs Buy & Hold,AR,0.0009
+6assets,SBCA vs MVO (γ=2),MDD,0.001333
+4assets,SBCA vs Buy & Hold,AR,0.002833
+4assets,SBCA vs Buy & Hold,SR,0.003833
+2assets,SBCA vs Equal Weight,Sortino,0.003867
+4assets,SBCA vs Equal Weight,AR,0.004633
+4assets,SBCA vs Buy & Hold,Sortino,0.004733
+6assets,SBCA vs Buy & Hold,Sortino,0.006667
+4assets,SBCA vs Equal Weight,Sortino,0.0081
+4assets,SBCA vs Equal Weight,SR,0.010467
+6assets,SBCA vs Buy & Hold,MDD,0.011933
+2assets,SBCA vs Buy & Hold,MDD,0.012133
+6assets,SBCA vs Buy & Hold,SR,0.012367
+6assets,SBCA vs Dow Jones,MDD,0.012867

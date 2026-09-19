@@ -1,0 +1,97 @@
+Group,block,baseline,metric,p,sig
+2assets,8,Buy & Hold,AR,0.0089,***
+2assets,8,Buy & Hold,SR,0.0016,***
+2assets,8,Buy & Hold,Sortino,0.0041,***
+2assets,8,Buy & Hold,MDD,0.0125,**
+2assets,8,Equal Weight,AR,0.0449,**
+2assets,8,Equal Weight,SR,0.0254,**
+2assets,8,Equal Weight,Sortino,0.0257,**
+2assets,8,Equal Weight,MDD,0.0459,**
+2assets,8,Dow Jones,AR,0.3506,-
+2assets,8,Dow Jones,SR,0.143,-
+2assets,8,Dow Jones,Sortino,0.0958,*
+2assets,8,Dow Jones,MDD,0.0532,*
+2assets,8,MVO,AR,0.3886,-
+2assets,8,MVO,SR,0.1348,-
+2assets,8,MVO,Sortino,0.0998,*
+2assets,8,MVO,MDD,0.0567,*
+2assets,60,Buy & Hold,AR,0.0013,***
+2assets,60,Buy & Hold,SR,0.0,***
+2assets,60,Buy & Hold,Sortino,0.0009,***
+2assets,60,Buy & Hold,MDD,0.0129,**
+2assets,60,Equal Weight,AR,0.0175,**
+2assets,60,Equal Weight,SR,0.0006,***
+2assets,60,Equal Weight,Sortino,0.0044,***
+2assets,60,Equal Weight,MDD,0.0403,**
+2assets,60,Dow Jones,AR,0.2987,-
+2assets,60,Dow Jones,SR,0.0914,*
+2assets,60,Dow Jones,Sortino,0.0785,*
+2assets,60,Dow Jones,MDD,0.0416,**
+2assets,60,MVO,AR,0.3405,-
+2assets,60,MVO,SR,0.1024,-
+2assets,60,MVO,Sortino,0.0991,*
+2assets,60,MVO,MDD,0.0379,**
+4assets,8,Buy & Hold,AR,0.0061,***
+4assets,8,Buy & Hold,SR,0.0026,***
+4assets,8,Buy & Hold,Sortino,0.005,***
+4assets,8,Buy & Hold,MDD,0.0374,**
+4assets,8,Equal Weight,AR,0.0205,**
+4assets,8,Equal Weight,SR,0.0191,**
+4assets,8,Equal Weight,Sortino,0.0239,**
+4assets,8,Equal Weight,MDD,0.1546,-
+4assets,8,Dow Jones,AR,0.4256,-
+4assets,8,Dow Jones,SR,0.1375,-
+4assets,8,Dow Jones,Sortino,0.1493,-
+4assets,8,Dow Jones,MDD,0.0469,**
+4assets,8,MVO,AR,0.2587,-
+4assets,8,MVO,SR,0.1006,-
+4assets,8,MVO,Sortino,0.0898,*
+4assets,8,MVO,MDD,0.0485,**
+4assets,60,Buy & Hold,AR,0.0034,***
+4assets,60,Buy & Hold,SR,0.0043,***
+4assets,60,Buy & Hold,Sortino,0.0053,***
+4assets,60,Buy & Hold,MDD,0.048,**
+4assets,60,Equal Weight,AR,0.004,***
+4assets,60,Equal Weight,SR,0.01,**
+4assets,60,Equal Weight,Sortino,0.0074,***
+4assets,60,Equal Weight,MDD,0.1758,-
+4assets,60,Dow Jones,AR,0.3661,-
+4assets,60,Dow Jones,SR,0.079,*
+4assets,60,Dow Jones,Sortino,0.097,*
+4assets,60,Dow Jones,MDD,0.0246,**
+4assets,60,MVO,AR,0.2059,-
+4assets,60,MVO,SR,0.0452,**
+4assets,60,MVO,Sortino,0.0498,**
+4assets,60,MVO,MDD,0.0263,**
+6assets,8,Buy & Hold,AR,0.1003,-
+6assets,8,Buy & Hold,SR,0.039,**
+6assets,8,Buy & Hold,Sortino,0.0382,**
+6assets,8,Buy & Hold,MDD,0.0091,***
+6assets,8,Equal Weight,AR,0.8055,-
+6assets,8,Equal Weight,SR,0.8197,-
+6assets,8,Equal Weight,Sortino,0.8163,-
+6assets,8,Equal Weight,MDD,0.6871,-
+6assets,8,Dow Jones,AR,0.1916,-
+6assets,8,Dow Jones,SR,0.088,*
+6assets,8,Dow Jones,Sortino,0.0909,*
+6assets,8,Dow Jones,MDD,0.0165,**
+6assets,8,MVO,AR,0.7103,-
+6assets,8,MVO,SR,0.193,-
+6assets,8,MVO,Sortino,0.3333,-
+6assets,8,MVO,MDD,0.0032,***
+6assets,60,Buy & Hold,AR,0.0501,*
+6assets,60,Buy & Hold,SR,0.0112,**
+6assets,60,Buy & Hold,Sortino,0.0064,***
+6assets,60,Buy & Hold,MDD,0.0119,**
+6assets,60,Equal Weight,AR,0.7775,-
+6assets,60,Equal Weight,SR,0.7927,-
+6assets,60,Equal Weight,Sortino,0.7859,-
+6assets,60,Equal Weight,MDD,0.6942,-
+6assets,60,Dow Jones,AR,0.1375,-
+6assets,60,Dow Jones,SR,0.0408,**
+6assets,60,Dow Jones,Sortino,0.0558,*
+6assets,60,Dow Jones,MDD,0.012,**
+6assets,60,MVO,AR,0.7027,-
+6assets,60,MVO,SR,0.1912,-
+6assets,60,MVO,Sortino,0.3649,-
+6assets,60,MVO,MDD,0.0016,***
