@@ -4,7 +4,7 @@ Per stock and per period: sample size, positive-class rate, and the AUC of the
 sentiment score under (a) the original stock-wise split and (b) the corrected
 chronological split, with percentile bootstrap 95% confidence intervals.
 
-Output: ./out_ts/bert_audit_table.csv  (+ printed LaTeX rows)
+Output: runs/bert_audit_table.csv  (+ printed LaTeX rows)
 """
 import io
 import os
@@ -99,7 +99,7 @@ def main():
         lines.append("\\hline")
     with io.open(os.path.join(OUT_TS, "bert_audit_rows.tex"), "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
-    print("\nLaTeX rows -> out_ts/bert_audit_rows.tex")
+    print("\nLaTeX rows -> runs/bert_audit_rows.tex")
 
 
 if __name__ == "__main__":

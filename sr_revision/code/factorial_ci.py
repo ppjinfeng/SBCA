@@ -12,7 +12,7 @@ replication series, so the two can be compared.  Percentile 95% intervals come
 from the same paired circular block bootstrap used elsewhere (30,000 resamples,
 block length 60), with the SAME block index applied to all four variants.
 
-Output: runs/factorial_ci.csv  and  ./out/factorial_ci_summary.txt
+Output: runs/factorial_ci.csv  and  runs/factorial_ci_summary.txt
 """
 import os
 import sys
@@ -126,7 +126,7 @@ def main():
         f.write(txt + "\n")
     n_excl = sum(1 for r in rows if r["excludes_zero"] == "yes")
     print(f"\nContrasts whose 95% CI excludes zero: {n_excl} of {len(rows)}")
-    print("Saved ./out/factorial_ci.csv")
+    print("Saved runs/factorial_ci.csv")
 
 
 if __name__ == "__main__":

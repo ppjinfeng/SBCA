@@ -107,7 +107,7 @@ def main():
     with pd.ExcelWriter("./runs_pre_correction/ablation_bootstrap_internal.xlsx") as w:
         df_boot.to_excel(w, sheet_name="InternalBootstrap", index=False)
         df_metrics.to_excel(w, sheet_name="AblationMetrics", index=False)
-    print("\nSaved ./out/ablation_bootstrap_internal.xlsx", flush=True)
+    print("\nSaved ./runs_pre_correction/ablation_bootstrap_internal.xlsx", flush=True)
     print(df_boot.to_string(index=False))
 
 

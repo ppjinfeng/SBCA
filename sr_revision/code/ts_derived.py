@@ -2,7 +2,7 @@
 Recompute the analyses that are derivable from the four time-split variant series
 plus the (feature-independent) deterministic baselines.
 
-Produces, in ./out_ts/:
+Produces, in runs/:
     blocklength_sensitivity.csv   external + internal p-values at blocks 20/40/60/120
     factorial_ci.csv              2x2 main effects / interaction with 95% bootstrap CIs
 """
@@ -110,7 +110,7 @@ def main():
     pd.DataFrame(fac_rows).to_csv(f"{OUT}/factorial_ci.csv", index=False)
     n_ex = sum(1 for r in fac_rows if r["excludes_zero"] == "yes")
     print(f"\nfactor CIs excluding zero: {n_ex}/{len(fac_rows)}")
-    print("saved out_ts/blocklength_sensitivity.csv and out_ts/factorial_ci.csv")
+    print("saved runs/blocklength_sensitivity.csv and runs/factorial_ci.csv")
 
 
 if __name__ == "__main__":

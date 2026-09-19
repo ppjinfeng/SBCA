@@ -14,8 +14,8 @@ Hyperparameters are kept identical to Bert.py: bert-base-uncased, 2 labels,
 4 epochs, lr 2e-5, batch 16, max_len 64.
 
 Outputs
-  ./out/bert_pred_timesplit.csv        full table with the new delta_bert
-  ./out/bert_split_compare.csv         per-stock AUC, old vs new, by period
+  runs/bert_pred_timesplit.csv        full table with the new delta_bert
+  runs/bert_split_compare.csv         per-stock AUC, old vs new, by period
 """
 import os
 import sys

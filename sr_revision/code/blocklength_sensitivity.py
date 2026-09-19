@@ -11,7 +11,7 @@ The bootstrap is vectorised for speed; a sanity check against the original
 
 Input : results/ablation_rets_{2,4,6}assets.csv  (daily net log returns per variant)
 Output: runs/blocklength_sensitivity.csv
-        ./out/blocklength_sensitivity_summary.txt
+        runs/blocklength_sensitivity_summary.txt
 """
 import os
 import sys
@@ -161,7 +161,7 @@ def main():
     with open("runs/blocklength_sensitivity_summary.txt", "w", encoding="utf-8") as f:
         f.write(txt + "\n")
     print("\n" + txt, flush=True)
-    print("\nSaved ./out/blocklength_sensitivity.csv")
+    print("\nSaved runs/blocklength_sensitivity.csv")
 
 
 if __name__ == "__main__":

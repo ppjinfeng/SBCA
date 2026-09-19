@@ -57,7 +57,7 @@ def main():
                            values="p", aggfunc="first")
     print("\n=== p-value comparison: block=8 (n^1/3) vs block=60 ===\n")
     print(pivot.to_string())
-    print("\nSaved ./out/blocklength_robustness.csv")
+    print("\nSaved runs/blocklength_robustness.csv")
 
 
 if __name__ == "__main__":

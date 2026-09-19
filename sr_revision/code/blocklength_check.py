@@ -58,7 +58,7 @@ def main():
                       f"{'<-- match' if abs(p - pub) < 0.0006 else ''}", flush=True)
 
     pd.DataFrame(rows).to_csv("runs/blocklength_check.csv", index=False)
-    print("\nSaved ./out/blocklength_check.csv")
+    print("\nSaved runs/blocklength_check.csv")
 
 
 if __name__ == "__main__":
